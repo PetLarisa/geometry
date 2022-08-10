@@ -1,0 +1,21 @@
+.rect{
+      background-color: yellow;
+      width:100px;
+      height:20;
+      margin: 100px;
+      border: blue;
+
+}
+
+.kvadr {
+    background-color: green;
+    height:100px;
+    margin: 100px;
+    border: yellow;
+
+}
+
+.figure {
+    background-color: rebeccapurple;
+    border: yellow;
+}
