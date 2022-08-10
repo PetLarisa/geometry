@@ -16,13 +16,13 @@ class Kvadrat extends Figure {
         const s = height * height
         window.alert(s)
         
-    let kvadr = document.querySelector('kvadr')
-    let p = document.createElement('p')
-    kvadr.width= kvadrat.height
+        let kvadr = document.querySelector('kvadr')
+        let p = document.createElement('p')
+        kvadr.width= this.height
 
 
-    kvadr.appendChild(p)
-       }
+        kvadr.appendChild(p)
+     }
        
 }
 
@@ -52,29 +52,26 @@ class Triangle extends Figure {
    }
 
 }
-//prompt("Напиши фигуру", 10)
-const figure = new Figure (String(prompt("Напиши фигуру")), Number(prompt("Введи длину")))
-if (figure.fig == 'квадрат'){
+
+for (let i = 1; i <= 10; i++) { 
+    const figure = new Figure (String(prompt("Напиши фигуру")), Number(prompt("Введи длину")))
+    if (figure.fig == 'квадрат'){
     const kvadrat = new Kvadrat ()
-   // alert(figure.height*figure.height)
+  
     kvadrat.square(figure.height)
-    let kvadr = document.querySelector('kvadr')
+ /*   let kvadr = document.querySelector('kvadr')
     let p = document.createElement('p')
     kvadr.width= kvadrat.height
-
-
-    kvadr.appendChild(p)
+    kvadr.appendChild(p)*/
     
-
-
 }
-else if (figure.fig == 'прямоугольник'){
+ if (figure.fig == 'прямоугольник'){
     const rectangle = new Rectangle (figure.fig,figure.height, Number(prompt("Введи ширину")))
   //  window.alert(rectangle.width)
     rectangle.square(figure.height, rectangle.width)
     rect.width= rectangle.width
 }
-else if (figure.fig == 'треугольник'){
+ if (figure.fig == 'треугольник'){
     const triangle = new Triangle (figure.fig,figure.height,Number(prompt("Введи высоту")))
     triangle.square(figure.height, triangle.width)
 }
@@ -83,4 +80,5 @@ else {
 }
 
 
+}
  
