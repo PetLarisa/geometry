@@ -4,10 +4,21 @@ class Figure {
     constructor(fig, height) {
         this.fig = fig
         this.height = height
-        
-        
+        this.draw()
     }
-   
+    draw(){
+        const fig = document.createElement("div")
+        fig.classList.add("figure")
+        fig.style.height = this.height + 'px'
+        if (this.width){
+            fig.style.width = this.width + 'px'
+        } else {
+            fig.style.width = this.height + 'px'
+        }
+        console.log(fig)
+        const drawArea = document.querySelector("body")
+        drawArea.append(fig)
+    }
 }
 
 class Kvadrat extends Figure {
@@ -15,13 +26,6 @@ class Kvadrat extends Figure {
     square (height){
         const s = height * height
         window.alert(s)
-        
-        let kvadr = document.querySelector('kvadr')
-        let p = document.createElement('p')
-        kvadr.width= this.height
-
-
-        kvadr.appendChild(p)
      }
        
 }
@@ -53,11 +57,11 @@ class Triangle extends Figure {
 
 }
 
-for (let i = 1; i <= 10; i++) { 
+for (let i = 1; i <= 2; i++) { 
     const figure = new Figure (String(prompt("Напиши фигуру")), Number(prompt("Введи длину")))
     if (figure.fig == 'квадрат'){
     const kvadrat = new Kvadrat ()
-  
+  //о ужас если вы хотели подомную проверку то зачем дважды обьект то создавать
     kvadrat.square(figure.height)
  /*   let kvadr = document.querySelector('kvadr')
     let p = document.createElement('p')
